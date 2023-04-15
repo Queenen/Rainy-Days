@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "quicksand_regular";
+  font-size: 14px;
+}
+
+:root {
+  --navigation: rgb(52, 110, 95);
+}
+
+@font-face {
+  font-family: "quicksand_regular";
+  src: url(/fonts/Quicksand-Regular.ttf);
+}
+
+@font-face {
+  font-family: "quicksand_bold";
+  src: url(/fonts/Quicksand-Bold.ttf);
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--navigation);
+  height: 5rem;
+  padding: 1rem 2rem;
+}
+
+header > * {
+  align-self: center;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+header .rd_logo {
+  height: 2.5rem;
+  width: auto;
+  margin-top: 0.25rem;
+}
+
+footer {
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--navigation);
+  padding: 2rem;
+  line-height: 2rem;
+  color: white;
+}
+
+.nav_link {
+  text-transform: uppercase;
+  font-family: "quicksand_bold";
+  color: white;
+  padding: 0 1.2rem;
+  font-size: 20px;
+}
