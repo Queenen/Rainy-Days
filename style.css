@@ -35,6 +35,13 @@ header > * {
   align-self: center;
 }
 
+h1 {
+  color: white;
+  background-color: darkslategray;
+  padding: 1.5rem;
+  text-align: center;
+}
+
 .icon {
   width: 32px;
   height: 32px;
@@ -66,6 +73,73 @@ footer {
   text-transform: uppercase;
   font-family: "quicksand_bold";
   color: white;
-  padding: 0 1.2rem;
   font-size: 20px;
+}
+
+footer .nav_link {
+  padding: 0 1.2rem;
+}
+
+#index_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.index_full_view {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+/* default by 320px width */
+
+/* Mobile Landscape 568px */
+@media screen and (min-width: 568px) {
+  * {
+    font-size: 18px;
+  }
+  .nav_link {
+    font-size: 24px;
+  }
+}
+/* Tablet Portrait 768px */
+@media screen and (min-width: 768px) {
+  * {
+    font-size: 20px;
+  }
+  .nav_link {
+    font-size: 26px;
+  }
+  .icon {
+    width: 45px;
+    height: 45px;
+  }
+  header .rd_logo {
+    height: 3rem;
+  }
+  footer .nav_link {
+    padding: 0 3rem;
+  }
+  .index_full_view {
+    display: block;
+  }
+  .index_crop_view {
+    display: none;
+  }
+}
+
+/* Tablet Landscape 1024px */
+@media screen and (min-width: 1024px) {
+  * {
+    font-size: 22px;
+  }
+  .nav_link {
+    font-size: 28px;
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+  footer .nav_link {
+    padding: 0 5rem;
+  }
 }
