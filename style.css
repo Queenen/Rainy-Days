@@ -169,7 +169,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  padding: 3rem 1rem 1rem 1rem;
+  padding: 0 1rem;
   background-color: rgb(232, 238, 233);
   position: relative;
 }
@@ -177,11 +177,10 @@ nav {
 .product_item {
   background-color: white;
   display: flex;
-  margin: 0 1rem;
+  margin: 2rem 1rem;
   flex-direction: column;
   width: fit-content;
   line-height: 2rem;
-  margin-bottom: 2rem;
 }
 
 .brand {
@@ -228,7 +227,7 @@ nav {
   width: 100%;
   text-align: center;
   position: absolute;
-  top: 0;
+  top: 7rem;
 }
 
 .atc_popup a {
@@ -237,14 +236,31 @@ nav {
 
 /* VIEW CART */
 
+.overlay {
+  display: none;
+  position: absolute;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+}
+
 .view_cart {
+  display: none;
   background-color: white;
   border: 1px solid black;
+  border-bottom-left-radius: 2rem;
   position: absolute;
   right: 0;
   z-index: 2;
-  width: 60%;
+  width: 70%;
   padding: 2rem;
+}
+
+.view_cart .close_menu {
+  position: absolute;
+  top: 1rem;
+  left: -3rem;
 }
 
 .view_cart div {
@@ -252,18 +268,38 @@ nav {
 }
 
 .vc_amount > * {
-  margin: 0 1rem 1rem 0;
+  margin: 0 0 1rem 1rem;
 }
 
 .vc_item {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.vc_item_price {
+  margin-top: 0.1rem;
 }
 
 .vc_product_info {
   display: flex;
   flex-direction: column;
   line-height: 1.5rem;
+}
+
+.vc_total {
+  margin: 1rem 1rem 0 1rem;
+  justify-content: space-between;
+}
+
+.gt_checkout {
+  font-family: "quicksand_bold";
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  background-color: orangered;
+  color: white;
+  border-radius: 2rem;
 }
 
 .small_thumbnail {
@@ -273,6 +309,12 @@ nav {
 /* MEDIA QUERIES */
 /* default by 320px width */
 
+@media screen and (min-width: 400px) {
+  .view_cart {
+    width: 60%;
+  }
+}
+
 /* Mobile Landscape 568px */
 @media screen and (min-width: 568px) {
   * {
@@ -280,6 +322,9 @@ nav {
   }
   .nav_link {
     font-size: 24px;
+  }
+  .view_cart {
+    width: 60%;
   }
 }
 /* Tablet Portrait 768px */
@@ -309,6 +354,9 @@ nav {
   }
   .index_crop_view {
     display: none;
+  }
+  .view_cart {
+    width: 45%;
   }
 }
 

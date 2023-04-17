@@ -23,7 +23,10 @@
           alt="rainy days logo"
           class="rd_logo"
       /></a>
-      <img src="/images/icons/w_cart_icon.png" alt="view cart" class="icon" />
+      <img
+        src="/images/icons/w_cart_icon.png"
+        alt="view cart"
+        class="icon cart_icon" />
     </header>
     <nav class="first_menu">
       <div class="nav_header">
@@ -104,9 +107,13 @@
       </div>
     </nav>
     <div class="view_cart">
+      <img
+        src="/images/icons/w_cross_icon.png"
+        class="close_menu close_cart clickable"
+        alt="close menu" />
       <div class="vc_amount">
-        <p>2</p>
-        <p>products</p>
+        <p>1</p>
+        <p>product(s)</p>
       </div>
       <div class="vc_item">
         <img
@@ -128,10 +135,17 @@
         <p class="bold">Total:</p>
         <p class="bold">$$$</p>
       </div>
+      <a href="/checkout.html"
+        ><button class="gt_checkout clickable">GO TO CHECKOUT</button></a
+      >
     </div>
     <main>
       <h1>JACKETS</h1>
+      <div class="atc_popup">
+        <p>Product was added to <a href="/cart.html">cart</a>!</p>
+      </div>
       <section id="products_container">
+        <div class="overlay"></div>
         <div class="product_item">
           <img
             src="/images/products/RainyDays_Jacket1.jpg"
@@ -206,9 +220,6 @@
               alt="add to cart"
               class="mini_icon" />
           </div>
-        </div>
-        <div class="atc_popup">
-          <p>Product was added to <a href="/cart.html">cart</a>!</p>
         </div>
       </section>
     </main>

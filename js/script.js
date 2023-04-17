@@ -1,9 +1,5 @@
-const fullMenu = document.querySelector("nav");
 const firstMenu = document.querySelector(".first_menu");
 const secondMenu = document.querySelector(".second_menu");
-const menuHeader = document.querySelector(".nav_header");
-const genderMenu = document.querySelector(".nav_gender");
-const productsMenu = document.querySelector(".nav_products");
 const menuTitle = document.querySelector(".nav_gender_output");
 
 const urlWomen = document.querySelector(".url_women");
@@ -57,4 +53,21 @@ atc.addEventListener("click", () => {
   setTimeout(() => {
     atcPopup.style.display = "none";
   }, "3500");
+});
+
+// View Cart Pop-up
+
+const overlay = document.querySelector(".overlay");
+const cartPopup = document.querySelector(".view_cart");
+const cartIcon = document.querySelector(".cart_icon");
+const closeCart = document.querySelector(".close_cart");
+
+cartIcon.addEventListener("click", () => {
+  cartPopup.style.display = "block";
+  overlay.style.display = "block";
+});
+
+closeCart.addEventListener("click", () => {
+  cartPopup.style.display = "none";
+  overlay.style.display = "none";
 });
