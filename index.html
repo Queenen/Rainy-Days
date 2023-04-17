@@ -7,10 +7,14 @@
     <meta name="description" content="Rainy Days - pushing the comfort zone" />
     <title>Rainy Days | Home</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="/js/script.js" type="module"></script>
   </head>
   <body>
     <header>
-      <img src="/images/icons/w_menu_icon.png" alt="show menu" class="icon" />
+      <img
+        src="/images/icons/w_menu_icon.png"
+        alt="show menu"
+        class="icon menu_icon" />
       <a href="/index.html"
         ><img
           src="/images/logo/rainy-days_logo.png"
@@ -19,6 +23,83 @@
       /></a>
       <img src="/images/icons/w_cart_icon.png" alt="view cart" class="icon" />
     </header>
+    <nav class="first_menu">
+      <div class="nav_header">
+        <img
+          src="/images/icons/w_cross_icon.png"
+          alt="close menu"
+          class="close_menu" />
+        <a href="/index.html">
+          <img
+            src="images/logo/rainy-days_logo.png"
+            alt="rainy days logo"
+            class="rd_logo" />
+        </a>
+        <p></p>
+      </div>
+      <div class="nav_categories nav_gender">
+        <div class="clickable url_women">
+          <p class="nav_link">Women</p>
+          <img
+            src="images/icons/b_angle-right.png"
+            alt="view products"
+            class="icon" />
+        </div>
+        <div class="clickable url_men">
+          <p class="nav_link">Men</p>
+          <img
+            src="images/icons/b_angle-right.png"
+            alt="view products"
+            class="icon" />
+        </div>
+        <div class="clickable url_unisex">
+          <p class="nav_link">Unisex</p>
+          <img
+            src="images/icons/b_angle-right.png"
+            alt="view products"
+            class="icon" />
+        </div>
+      </div>
+    </nav>
+    <nav class="second_menu">
+      <div class="nav_header">
+        <img
+          src="/images/icons/w_arrow-left.png"
+          alt="return to main menu"
+          class="icon return_menu" />
+        <p class="nav_link nav_gender_output"></p>
+      </div>
+      <div class="nav_categories nav_products">
+        <a href="/products.html" class="clickable">
+          <p class="nav_link">Jackets</p>
+          <img
+            src="images/icons/b_angle-right.png"
+            alt="view products"
+            class="icon" />
+        </a>
+        <div>
+          <p class="nav_link">Pants<span>Coming soon</span></p>
+          <img
+            src="images/icons/b_angle-right.png"
+            alt="view products"
+            class="icon" />
+        </div>
+        <div>
+          <p class="nav_link">Jumpsuits<span>Coming soon</span></p>
+          <img
+            src="images/icons/b_angle-right.png"
+            alt="view products"
+            class="icon" />
+        </div>
+        <div>
+          <p class="nav_link">Accessories<span>Coming soon</span></p>
+          <img
+            src="images/icons/b_angle-right.png"
+            alt="view products"
+            class="icon" />
+        </div>
+      </div>
+    </nav>
     <main>
       <h1>Pushing the Comfort Zone</h1>
       <section id="index_container">
@@ -34,21 +115,12 @@
           src="/images/other/mountains-g3be4b77ea_1920.jpg"
           alt="young man enjoying the scenery of nature"
           class="index_crop_view" />
-        <!--<img
-          src="images/products/RainyDays_Jacket1.jpg"
-          alt="orange, gray and black outdoor jacket" />
-        <img
-          src="images/products/RainyDays_Jacket2.jpg"
-          alt="dark gray, breathing jacket" />
-        <img
-          src="images/products/RainyDays_Jacket4.jpg"
-          alt="black and white outdoor jacket with yellow details" />-->
       </section>
     </main>
     <footer>
       <div>
-        <a href="" class="nav_link">Contact us</a>
-        <a href="" class="nav_link">About us</a>
+        <a href="/html/contact.html" class="nav_link">Contact us</a>
+        <a href="/html/about.html" class="nav_link">About us</a>
       </div>
       <p>© Rainy Days. All rights reserved.</p>
     </footer>
