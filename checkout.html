@@ -4,36 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Please let us know how we can help." />
-    <title>Rainy Days | Contact</title>
+    <meta name="description" content="Proceeding with checkout" />
+    <title>Rainy Days | Checkout</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="/js/contact.js" type="module"></script>
+    <script src="/js/script.js" type="module"></script>
   </head>
-
   <body>
     <header>
       <img
         src="/images/icons/w_menu_icon.png"
         alt="show menu"
-        class="icon menu_icon clickable" />
+        class="icon menu_icon" />
       <a href="/index.html"
         ><img
           src="/images/logo/rainy-days_logo.png"
           alt="rainy days logo"
-          class="rd_logo clickable"
+          class="rd_logo"
       /></a>
       <img
         src="/images/icons/w_cart_icon.png"
         alt="view cart"
-        class="icon cart_icon clickable" />
+        class="icon cart_icon" />
     </header>
-    <!-- POP-UP OPEN MENU | GENDER  -->
     <nav class="first_menu">
       <div class="nav_header">
         <img
           src="/images/icons/w_cross_icon.png"
           alt="close menu"
-          class="close_menu" />
+          class="close_menu clickable" />
         <a href="/index.html">
           <img
             src="images/logo/rainy-days_logo.png"
@@ -66,7 +64,6 @@
         </div>
       </div>
     </nav>
-    <!-- POP-UP OPEN MENU | CATEGORIES  -->
     <nav class="second_menu">
       <div class="nav_header">
         <img
@@ -74,7 +71,6 @@
           alt="return to main menu"
           class="icon return_menu" />
         <p class="nav_link nav_gender_output"></p>
-        <p></p>
       </div>
       <div class="nav_categories nav_products">
         <a href="/products.html" class="clickable">
@@ -107,7 +103,6 @@
         </div>
       </div>
     </nav>
-    <!-- POP-UP VIEW CART -->
     <div class="view_cart">
       <img
         src="/images/icons/w_cross_icon.png"
@@ -137,68 +132,64 @@
         <p class="bold">Total:</p>
         <p class="bold">$$$</p>
       </div>
-      <a href="/checkout.html"
+      <a href="/cart.html"
         ><button class="gt_checkout clickable">GO TO CHECKOUT</button></a
       >
     </div>
-
-    <main id="contact">
-      <section id="contact_hero">
-        <img
-          src="/images/other/adobestock_250609864-1844117297_crop.jpg"
-          alt=""
-          class="contact_img" />
-        <h1>CONTACT US</h1>
-      </section>
-      <section id="contact_info">
-        <h2>Available Hours</h2>
-        <div class="contact_hours">
-          <div>
-            <p>Mon - Fri:</p>
-            <p>Saturday:</p>
-            <p>Sunday:</p>
-          </div>
-          <div>
-            <p>7am - 4pm</p>
-            <p>8am - 2pm</p>
-            <p>9am - 1pm</p>
-          </div>
+    <main id="checkout">
+      <h1>CHECKOUT</h1>
+      <div class="co_process_bar">
+        <div></div>
+        <div style="background-color: darkgray"></div>
+        <div></div>
+      </div>
+      <form>
+        <div>
+          <label for="first_name" class="bold">First name</label>
+          <p class="error">Please add your first name</p>
+          <input id="first_name" type="text" />
         </div>
-      </section>
-      <section id="contact_form">
-        <form>
-          <h2>Contact us</h2>
-          <div>
-            <label for="full_name" class="bold">Full name</label>
-            <p class="error">Please add your full name.</p>
-            <input type="text" id="full_name" />
-          </div>
-          <div>
-            <label for="email" class="bold">Email</label>
-            <p class="error">Please write a proper email adress.</p>
-            <input type="email" id="email" />
-          </div>
-          <div>
-            <label for="subject" class="bold">Subject</label>
-            <p class="error">Please add a subject for the message.</p>
-            <input type="text" id="subject" />
-          </div>
-          <div>
-            <label for="message" class="bold">Message</label>
-            <p class="error">
-              Your message needs to be at least 10 characters.
-            </p>
-            <textarea id="message"></textarea>
-            <div class="send_message clickable">SEND MESSAGE</div>
-          </div>
-        </form>
-      </section>
-    </main>
+        <div>
+          <label for="last_name" class="bold">Last name</label>
+          <p class="error">Please add your last name</p>
+          <input id="last_name" type="text" />
+        </div>
 
+        <div>
+          <label for="street_name" class="bold">Street name</label>
+          <p class="error">Please add your street name</p>
+          <input id="street_name" type="text" />
+        </div>
+        <div>
+          <label for="street_no" class="bold">Street NO</label>
+          <p class="error">Please add your street number</p>
+          <input id="street_no" type="number" />
+        </div>
+
+        <div>
+          <label for="city" class="bold">City</label>
+          <p class="error">Please add your city</p>
+          <input id="city" type="text" />
+        </div>
+        <div>
+          <label for="email" class="bold">Email</label>
+          <p class="error">Please add your email adress</p>
+          <input id="email" type="email" />
+        </div>
+        <div>
+          <label for="mobile" class="bold">Mobile number</label>
+          <p class="error">Please add your mobile number</p>
+          <input id="mobile" type="number" />
+        </div>
+        <a href="/checkout.html">
+          <div class="cart_checkout clickable">PROCEED</div>
+        </a>
+      </form>
+    </main>
     <footer>
       <div>
-        <a href="/contact.html" class="nav_link">Contact us</a>
-        <a href="/about.html" class="nav_link">About us</a>
+        <a href="/html/contact.html" class="nav_link">Contact us</a>
+        <a href="/html/about.html" class="nav_link">About us</a>
       </div>
       <p>© Rainy Days. All rights reserved.</p>
     </footer>

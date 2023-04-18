@@ -1,16 +1,12 @@
-const firstMenu = document.querySelector(".first_menu");
-const secondMenu = document.querySelector(".second_menu");
-const menuTitle = document.querySelector(".nav_gender_output");
-
-const urlWomen = document.querySelector(".url_women");
-const urlMen = document.querySelector(".url_men");
-const urlUnisex = document.querySelector(".url_unisex");
+// Nav menu
 
 const menuIcon = document.querySelector(".menu_icon");
 const closeMenu = document.querySelector(".close_menu");
 const returnMenu = document.querySelector(".return_menu");
 
-// Toggle Menu
+const firstMenu = document.querySelector(".first_menu");
+const secondMenu = document.querySelector(".second_menu");
+
 menuIcon.addEventListener("click", () => {
   firstMenu.style.display = "block";
 });
@@ -25,6 +21,12 @@ returnMenu.addEventListener("click", () => {
 });
 
 // Adding proper menu title
+
+const menuTitle = document.querySelector(".nav_gender_output");
+const urlWomen = document.querySelector(".url_women");
+const urlMen = document.querySelector(".url_men");
+const urlUnisex = document.querySelector(".url_unisex");
+
 urlWomen.addEventListener("click", () => {
   menuTitle.innerHTML = `Women`;
   secondMenu.style.display = "block";
@@ -43,9 +45,9 @@ urlUnisex.addEventListener("click", () => {
   firstMenu.style.display = "none";
 });
 
-// Add to cart pop-up
+// Added-to-cart
 
-const atc = document.querySelector(".atc");
+/*const atc = document.querySelector(".atc");
 const atcPopup = document.querySelector(".atc_popup");
 
 atc.addEventListener("click", () => {
@@ -53,21 +55,26 @@ atc.addEventListener("click", () => {
   setTimeout(() => {
     atcPopup.style.display = "none";
   }, "3500");
-});
+});*/
 
-// View Cart Pop-up
-
-const overlay = document.querySelector(".overlay");
-const cartPopup = document.querySelector(".view_cart");
+// View Cart
+const viewCart = document.querySelector(".view_cart");
 const cartIcon = document.querySelector(".cart_icon");
 const closeCart = document.querySelector(".close_cart");
 
 cartIcon.addEventListener("click", () => {
-  cartPopup.style.display = "block";
-  overlay.style.display = "block";
+  viewCart.style.display = "block";
 });
 
 closeCart.addEventListener("click", () => {
+  viewCart.style.display = "none";
+});
+
+/* Contact form validation */
+const contactButton = document.querySelector(".contact_button");
+const contactForm = document.querySelector("#contact_form");
+
+contactButton.addEventListener("click", () => {
   cartPopup.style.display = "none";
   overlay.style.display = "none";
 });

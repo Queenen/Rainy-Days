@@ -21,14 +21,17 @@
           alt="rainy days logo"
           class="rd_logo"
       /></a>
-      <img src="/images/icons/w_cart_icon.png" alt="view cart" class="icon" />
+      <img
+        src="/images/icons/w_cart_icon.png"
+        alt="view cart"
+        class="icon cart_icon" />
     </header>
     <nav class="first_menu">
       <div class="nav_header">
         <img
           src="/images/icons/w_cross_icon.png"
           alt="close menu"
-          class="close_menu" />
+          class="close_menu clickable" />
         <a href="/index.html">
           <img
             src="images/logo/rainy-days_logo.png"
@@ -100,6 +103,39 @@
         </div>
       </div>
     </nav>
+    <div class="view_cart">
+      <img
+        src="/images/icons/w_cross_icon.png"
+        class="close_menu close_cart clickable"
+        alt="close menu" />
+      <div class="vc_amount">
+        <p>1</p>
+        <p>product(s)</p>
+      </div>
+      <div class="vc_item">
+        <img
+          src="/images/products/RainyDays_Jacket1.jpg"
+          alt="jacket"
+          class="small_thumbnail" />
+        <div class="vc_product_info">
+          <p class="bold">Rainy Days</p>
+          <p>Jacket</p>
+          <p>Size: <span>M</span></p>
+          <p>Amount: <span>1</span></p>
+          <p class="underline clickable smaller">Remove</p>
+        </div>
+        <div class="vc_item_price">
+          <p class="bold">$$$</p>
+        </div>
+      </div>
+      <div class="vc_total">
+        <p class="bold">Total:</p>
+        <p class="bold">$$$</p>
+      </div>
+      <a href="/cart.html"
+        ><button class="gt_checkout clickable">GO TO CHECKOUT</button></a
+      >
+    </div>
     <main>
       <h1>Pushing the Comfort Zone</h1>
       <section id="index_container">
