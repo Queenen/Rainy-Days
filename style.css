@@ -236,14 +236,14 @@ nav {
 
 /* VIEW CART */
 
-.overlay {
+/*.overlay {
   display: none;
   position: absolute;
   background-color: black;
   height: 100%;
   width: 100%;
   opacity: 0.7;
-}
+}*/
 
 .view_cart {
   display: none;
@@ -379,6 +379,78 @@ nav {
   margin-bottom: 2rem;
 }
 
+/* CONTACT */
+
+#contact_hero {
+  position: relative;
+}
+
+#contact_hero h1 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  font-size: 1.6em;
+}
+
+.contact_img {
+  width: 100%;
+}
+
+#contact_info {
+  padding: 3rem 25%;
+  line-height: 1.5rem;
+}
+
+#contact h2 {
+  font-size: 1.4em;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contact_hours {
+  display: flex;
+  justify-content: space-between;
+}
+
+#contact_form {
+  padding: 3rem 20%;
+  background-color: whitesmoke;
+}
+
+#contact_form div {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact_form input,
+#contact_form textarea {
+  padding: 0.5em;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 1rem;
+  resize: none;
+}
+
+#contact_form textarea {
+  height: 7rem;
+}
+
+#contact_form button {
+  background-color: orangered;
+  color: white;
+  font-family: "quicksand_bold";
+  letter-spacing: 0.1rem;
+  border-radius: 1rem;
+  padding: 0.5em;
+}
+
+.error {
+  color: red;
+  font-size: 0.8em;
+}
+
 /* MEDIA QUERIES */
 /* default by 320px width */
 
@@ -440,6 +512,15 @@ nav {
   .about_text {
     padding: 2rem 25%;
   }
+  #contact_info {
+    padding: 3rem 35%;
+  }
+  #contact_form {
+    padding: 3rem 25%;
+  }
+  #contact_hero h1 {
+    font-size: 2em;
+  }
 }
 
 /* Tablet Landscape 1024px */
@@ -471,5 +552,8 @@ nav {
   #details_container select,
   #details_container .atc {
     margin: 0.5rem 25%;
+  }
+  #contact_form {
+    padding: 3rem 30%;
   }
 }
