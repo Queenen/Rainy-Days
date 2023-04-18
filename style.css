@@ -328,7 +328,7 @@ nav {
 
 #details_container select,
 #details_container .atc {
-  margin: 0 20%;
+  margin: 0.5rem 20%;
 }
 
 #details_container .atc {
@@ -359,6 +359,24 @@ nav {
 
 .title {
   font-size: 18px;
+}
+
+/* ABOUT */
+.about_img {
+  width: 100%;
+}
+
+.about_text {
+  padding: 2rem 20%;
+  line-height: 1.5rem;
+}
+
+.about_text .title {
+  margin: 2rem 0;
+}
+
+.about_text:last-of-type {
+  margin-bottom: 2rem;
 }
 
 /* MEDIA QUERIES */
@@ -419,6 +437,9 @@ nav {
   .view_cart {
     width: 45%;
   }
+  .about_text {
+    padding: 2rem 25%;
+  }
 }
 
 /* Tablet Landscape 1024px */
@@ -449,6 +470,6 @@ nav {
 
   #details_container select,
   #details_container .atc {
-    margin: 0 25%;
+    margin: 0.5rem 25%;
   }
 }
