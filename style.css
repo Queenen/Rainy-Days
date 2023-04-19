@@ -358,19 +358,6 @@ nav {
   font-size: 1.4em;
 }
 
-.co_process_bar {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 2rem 25%;
-}
-
-.co_process_bar div {
-  height: 1rem;
-  width: 1rem;
-  background-color: rgb(235, 235, 235);
-  border-radius: 100%;
-}
-
 /* DETAILS */
 
 .details_img {
@@ -525,33 +512,111 @@ nav {
 
 /* CHECKOUT */
 
-#checkout .cart_checkout {
-  width: 12em;
+.co_process_bar {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
 }
 
-#checkout form {
+.co_process_bar div {
+  margin: 0 1em;
+  height: 1rem;
+  width: 1rem;
+  background-color: rgb(235, 235, 235);
+  border-radius: 100%;
+}
+
+/* CHECKOUT 2 */
+
+#checkout_1,
+#checkout_2,
+#checkout_3 {
+  padding: 0 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 0;
+  margin: 2rem 0;
 }
 
-#checkout form > div {
+#checkout_3 {
+  padding: 0 20%;
+}
+
+#checkout_1 > *,
+#checkout_2 > *,
+#checkout_3 > * {
+  width: 80%;
+}
+
+#checkout_1 input,
+#checkout_2 input {
+  margin: 0.5rem 0 1rem 0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  background-color: whitesmoke;
+}
+
+#checkout_2,
+#checkout_3 {
+  display: none;
+}
+
+.checkout_card {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.checkout_card div {
   display: flex;
   flex-direction: column;
-  width: 60%;
 }
 
-#checkout input {
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
+.pay_card {
+  width: 4rem;
 }
 
-#street_no {
+.checkout_flex_col {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout_flex_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout_valid input,
+.street input {
   width: 40%;
 }
 
+.card_number input,
+.cvc input {
+  width: 15%;
+}
+
+.proceed_btn {
+  background-color: orangered;
+  color: white;
+  font-family: "quicksand_bold";
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 1rem;
+  margin: 2rem 0;
+}
+
+.checkout_success {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.checkout_success > * {
+  margin: 1rem 0;
+}
 /* MEDIA QUERIES */
 /* default by 320px width */
 
@@ -585,7 +650,7 @@ nav {
   .cart_total {
     padding: 1rem 4rem;
   }
-  #checkout form > div {
+  #checkout_2 > * {
     width: 50%;
   }
 }
@@ -635,9 +700,6 @@ nav {
   #contact_hero h1 {
     font-size: 2em;
   }
-  #checkout form > div {
-    width: 40%;
-  }
 }
 
 /* Tablet Landscape 1024px */
@@ -675,8 +737,5 @@ nav {
   }
   .cart_item {
     padding: 2rem 25%;
-  }
-  #checkout form > div {
-    width: 35%;
   }
 }
