@@ -169,7 +169,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  padding: 0 1rem;
+  padding: 5rem 1rem 2rem 1rem;
   background-color: rgb(232, 238, 233);
   position: relative;
 }
@@ -181,6 +181,28 @@ nav {
   flex-direction: column;
   width: fit-content;
   line-height: 2rem;
+}
+
+.featured_btn {
+  position: absolute;
+  padding: 1rem;
+  z-index: 1;
+  top: 14.5rem;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid orangered;
+  color: orangered;
+  border-radius: 0.5rem;
+  width: 14rem;
+}
+
+.featured_btn:hover {
+  background-color: orangered;
+  color: white;
+  border: 2px solid white;
+  cursor: pointer;
 }
 
 .brand {
