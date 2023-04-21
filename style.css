@@ -7,6 +7,7 @@
 
 :root {
   --navigation: rgb(52, 110, 95);
+  --buttons: #d63900;
 }
 
 @font-face {
@@ -192,14 +193,14 @@ nav {
   right: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  border: 2px solid orangered;
-  color: orangered;
+  border: 2px solid var(--buttons);
+  color: var(--buttons);
   border-radius: 0.5rem;
   width: 14rem;
 }
 
 .featured_btn:hover {
-  background-color: orangered;
+  background-color: var(--buttons);
   color: white;
   border: 2px solid white;
   cursor: pointer;
@@ -243,15 +244,6 @@ nav {
 }
 
 /* VIEW CART */
-
-/*.overlay {
-  display: none;
-  position: absolute;
-  background-color: black;
-  height: 100%;
-  width: 100%;
-  opacity: 0.7;
-}*/
 
 .view_cart {
   display: none;
@@ -305,7 +297,7 @@ nav {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
   width: 100%;
-  background-color: orangered;
+  background-color: var(--buttons);
   color: white;
   border-radius: 2rem;
 }
@@ -356,7 +348,7 @@ nav {
 }
 
 .cart_checkout {
-  background-color: orangered;
+  background-color: var(--buttons);
   margin: 2rem;
   padding: 1rem;
   border-radius: 2rem;
@@ -443,6 +435,7 @@ nav {
 
 #contact_hero {
   position: relative;
+  background-color: gray;
 }
 
 #contact_hero h1 {
@@ -498,7 +491,7 @@ nav {
 }
 
 #contact_form .send_message {
-  background-color: orangered;
+  background-color: var(--buttons);
   color: white;
   font-family: "quicksand_bold";
   letter-spacing: 0.1rem;
@@ -609,7 +602,7 @@ nav {
 }
 
 .proceed_btn {
-  background-color: orangered;
+  background-color: var(--buttons);
   color: white;
   font-family: "quicksand_bold";
   padding: 0.5rem;
