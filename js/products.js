@@ -1,7 +1,6 @@
 const productContainer = document.querySelector("#products_container");
 
 let url = "http://rainy-days.local/wp-json/wc/store/products";
-console.log(url);
 
 // Featured button
 
@@ -10,7 +9,6 @@ const featuredBtn = document.querySelector(".featured_btn");
 // Change url on click = changes results showing
 featuredBtn.addEventListener("click", () => {
   url = "http://rainy-days.local/wp-json/wc/store/products?featured=true";
-  console.log(url);
 });
 
 async function fetchProducts() {

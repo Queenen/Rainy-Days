@@ -242,21 +242,6 @@ nav {
   padding: 1rem;
 }
 
-.atc_popup {
-  display: none;
-  z-index: 1;
-  background-color: yellowgreen;
-  padding: 2rem 0;
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  top: 7rem;
-}
-
-.atc_popup a {
-  color: orangered;
-}
-
 /* VIEW CART */
 
 /*.overlay {
@@ -520,6 +505,10 @@ nav {
   border-radius: 1rem;
   text-align: center;
   padding: 1em;
+}
+
+.contact_message_sent {
+  padding: 2rem 0;
 }
 
 .contact_message_sent > * {

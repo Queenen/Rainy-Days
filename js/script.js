@@ -45,18 +45,6 @@ urlUnisex.addEventListener("click", () => {
   firstMenu.style.display = "none";
 });
 
-// Added-to-cart
-
-/*const atc = document.querySelector(".atc");
-const atcPopup = document.querySelector(".atc_popup");
-
-atc.addEventListener("click", () => {
-  atcPopup.style.display = "block";
-  setTimeout(() => {
-    atcPopup.style.display = "none";
-  }, "3500");
-});*/
-
 // View Cart
 const viewCart = document.querySelector(".view_cart");
 const cartIcon = document.querySelector(".cart_icon");
@@ -68,13 +56,4 @@ cartIcon.addEventListener("click", () => {
 
 closeCart.addEventListener("click", () => {
   viewCart.style.display = "none";
-});
-
-/* Contact form validation */
-const contactButton = document.querySelector(".contact_button");
-const contactForm = document.querySelector("#contact_form");
-
-contactButton.addEventListener("click", () => {
-  cartPopup.style.display = "none";
-  overlay.style.display = "none";
 });
