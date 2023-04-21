@@ -2,15 +2,6 @@ const productContainer = document.querySelector("#products_container");
 
 let url = "http://rainy-days.local/wp-json/wc/store/products";
 
-// Featured button
-
-const featuredBtn = document.querySelector(".featured_btn");
-
-// Change url on click = changes results showing
-featuredBtn.addEventListener("click", () => {
-  url = "http://rainy-days.local/wp-json/wc/store/products?featured=true";
-});
-
 async function fetchProducts() {
   try {
     const response = await fetch(url);
@@ -52,3 +43,24 @@ async function fetchProducts() {
 }
 
 fetchProducts();
+
+// Featured button
+const featuredBtn = document.querySelector(".featured_btn");
+const showAllBtn = document.querySelector(".show_all_btn");
+
+featuredBtn.addEventListener("click", () => {
+  url = "http://rainy-days.local/wp-json/wc/store/products?featured=true";
+  productContainer.innerHTML = "";
+  fetchProducts();
+  featuredBtn.style.display = "none";
+  showAllBtn.style.display = "block";
+});
+
+// Show all button
+showAllBtn.addEventListener("click", () => {
+  url = "http://rainy-days.local/wp-json/wc/store/products";
+  productContainer.innerHTML = "";
+  fetchProducts();
+  featuredBtn.style.display = "block";
+  showAllBtn.style.display = "none";
+});
