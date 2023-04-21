@@ -8,7 +8,7 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-url = "http://rainy-days.local/wp-json/wc/store/products/" + id;
+url = "http://rainydaysshop.no/wp-json/wc/store/products/" + id;
 
 async function fetchProduct() {
   try {
