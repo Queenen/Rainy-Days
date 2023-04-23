@@ -514,6 +514,7 @@ nav {
   border-radius: 1rem;
   text-align: center;
   padding: 1em;
+  margin-top: 0.5rem;
 }
 
 #contact_form .send_message:hover {
