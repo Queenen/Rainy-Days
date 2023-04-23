@@ -1,6 +1,6 @@
 const productContainer = document.querySelector("#products_container");
 
-let url = "http://rainydaysshop.no/wp-json/wc/store/products";
+let url = "https://rainydaysshop.no/wp-json/wc/store/products";
 
 async function fetchProducts() {
   try {
