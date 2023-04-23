@@ -1,4 +1,6 @@
 const detailContainer = document.querySelector("#details_container");
+const errorMsg = document.querySelector(".error_msg");
+const loader = document.querySelector(".loader");
 
 const link = document.location;
 
@@ -18,6 +20,8 @@ async function fetchProduct() {
 
     for (let i = 0; i < images.length; i++) {
       const imageUrl = images[i].src;
+
+      loader.style.display = "none";
 
       function createHtml() {
         detailContainer.innerHTML += `
@@ -52,7 +56,11 @@ async function fetchProduct() {
       createHtml();
     }
   } catch (error) {
-    detailContainer.innerHTML = ("error", error);
+    setTimeout(() => {
+      loader.style.display = "none";
+      errorMsg.style.display = "block";
+      errorMsg.innerHTML = ("error", error);
+    }, 2000);
   }
 }
 

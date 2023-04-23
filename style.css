@@ -9,6 +9,7 @@
   --navigation: rgb(52, 110, 95);
   --buttons: #d63900;
   --buttons_hover: #8e2a05;
+  --background: rgb(232, 238, 233);
 }
 
 @font-face {
@@ -30,11 +31,18 @@ header {
   justify-content: space-between;
   background-color: var(--navigation);
   height: 5rem;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
 }
 
 header > * {
   align-self: center;
+}
+
+header .icon {
+  padding: 0 2rem;
 }
 
 h1 {
@@ -158,11 +166,19 @@ nav {
 .first_menu,
 .second_menu {
   display: none;
+  position: fixed;
+  z-index: 2;
 }
 
 .nav_link span {
   margin-left: 1rem;
   letter-spacing: 2px;
+}
+
+#index .row {
+  margin: 0;
+  background-color: var(--navigation);
+  height: 5rem;
 }
 
 /* PRODUCTS*/
@@ -190,7 +206,7 @@ nav {
   position: absolute;
   padding: 1rem;
   z-index: 1;
-  top: 14.5rem;
+  top: 11rem;
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
@@ -227,6 +243,7 @@ nav {
   background-color: var(--navigation);
   align-items: center;
   color: white;
+  position: relative;
 }
 
 .bold {
@@ -248,16 +265,44 @@ nav {
   padding: 1rem;
 }
 
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin: 1rem 0;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.space {
+  padding: 2rem 0;
+  background-color: var(--background);
+}
+
 /* VIEW CART */
 
 .view_cart {
   display: none;
   background-color: white;
-  border: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
   border-bottom-left-radius: 2rem;
-  position: absolute;
+  position: fixed;
+  top: 7rem;
   right: 0;
-  z-index: 2;
+  z-index: 3;
   width: 70%;
   padding: 2rem;
 }
@@ -444,6 +489,11 @@ nav {
   margin-bottom: 2rem;
 }
 
+.error_msg {
+  display: none;
+  margin: 5rem auto 30rem auto;
+}
+
 /* CONTACT */
 
 #contact_hero,
@@ -456,7 +506,7 @@ nav {
 #about_hero h1 {
   margin: 0;
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: transparent;
@@ -465,6 +515,7 @@ nav {
 
 .contact_img,
 .about_img {
+  margin-top: 7rem;
   width: 100%;
 }
 
@@ -552,6 +603,10 @@ nav {
   border-radius: 100%;
 }
 
+.row {
+  margin: 1rem 0;
+}
+
 /* CHECKOUT 2 */
 
 #checkout_1,
@@ -562,6 +617,7 @@ nav {
   flex-direction: column;
   align-items: center;
   margin: 2rem 0;
+  margin-bottom: 10rem;
 }
 
 #checkout_3 {

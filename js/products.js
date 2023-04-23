@@ -1,4 +1,6 @@
 const productContainer = document.querySelector("#products_container");
+const errorMsg = document.querySelector(".error_msg");
+const loader = document.querySelector(".loader");
 
 let url = "https://rainydaysshop.no/wp-json/wc/store/products";
 
@@ -12,6 +14,8 @@ async function fetchProducts() {
 
       images.forEach(function (imgurl) {
         const imageUrl = imgurl.src;
+
+        loader.style.display = "none";
 
         function createHTML() {
           productContainer.innerHTML += `
@@ -38,7 +42,11 @@ async function fetchProducts() {
       });
     });
   } catch (error) {
-    productContainer.innerHTML = ("error", error);
+    setTimeout(() => {
+      loader.style.display = "none";
+      errorMsg.style.display = "block";
+      errorMsg.innerHTML = ("error", error);
+    }, 2000);
   }
 }
 
